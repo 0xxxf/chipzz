@@ -8,7 +8,7 @@
 int main(int argc, char *argv[]) {
   constexpr int32_t screen_w = 64 * 10; // scale 10x 
   constexpr int32_t screen_h = 32 * 10;
-  constexpr uint8_t instructions_per_frame = 3;
+  constexpr uint8_t instructions_per_frame = 10;
 
   if (strcmp(argv[1], "-w") == 0) {
     Chip chip(argv[2]);

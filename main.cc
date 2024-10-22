@@ -14,7 +14,10 @@ int main(int argc, char *argv[]) {
     Chip chip(argv[2]);
 
     InitWindow(screen_w, screen_h, "chipzz");
+    InitAudioDevice();
     SetTargetFPS(60);
+
+    Sound buzzer_wav = LoadSound("resources/game_buzzer.wav");
     
     auto last_time = std::chrono::high_resolution_clock::now();
 
@@ -42,6 +45,7 @@ int main(int argc, char *argv[]) {
       if (elapsed >= 16) {
         if (chip.dt > 0) chip.dt--;
         if (chip.st > 0) {
+          PlaySound(buzzer_wav);
           chip.st--;
         }
 

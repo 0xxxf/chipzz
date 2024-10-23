@@ -16,6 +16,6 @@ For building on UNIX systems through gcc or clang, it should be as straight forw
 Run with:
 
 ```console
-foo@bar:~$ chipzz.exe -w /path-to-rom
+foo@bar:~$ chipzz.exe /path-to-rom
 ```
 
